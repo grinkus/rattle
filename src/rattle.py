@@ -63,7 +63,7 @@ class UiIrc:
 				user = line[0].split("!")[0].split(":")[1]
 				command = line[3].split(":")[1]
 				subcommand = line[4]
-				msg = ' '.join( line[3:len(line)] )
+				msg = ' '.join( line[3:] )
 				self._commands.append(Command(user,command,subcommand,msg))
 
 	def getUserCommand(self):
